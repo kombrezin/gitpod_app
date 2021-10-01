@@ -31,7 +31,14 @@
     <%= form.number_field :ano %>
   </div>
 
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= form.select :cliente_id, Cliente.all.map{ |x| [x.nome, x.id]} %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
+
 <% end %>
